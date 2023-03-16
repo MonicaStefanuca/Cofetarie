@@ -1,0 +1,22 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Text;
+using System.Threading.Tasks;
+
+public class ProdusManager
+{
+    private static List<Produs> produse = new List<Produs>();
+    public static void AdaugaProdus(string nume, string descriere, decimal pret)
+    {
+    }
+
+    public static void StergeProdus(Produs produs)
+    {
+    }
+
+    public static List<Produs> GetProduse()
+    {
+    }
+}
