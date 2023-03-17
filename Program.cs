@@ -1,15 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
+using EvidentaProduse;
 
 namespace Cofetarie
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
+            Produs produs = new Produs();
+
+            int nrProduse = 0;
         }
     }
 }

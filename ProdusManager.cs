@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 public class ProdusManager
 {
-    private static List<Produs> produse = new List<Produs>();
+    private string numeFisier;
+
     public static void AdaugaProdus(string nume, string descriere, decimal pret)
     {
     }
