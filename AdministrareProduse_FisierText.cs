@@ -49,5 +49,26 @@ namespace NivelStocareDate
 
             return produse;
         }
+        public Produs CautaProdus(string nume)
+        {
+            // instructiunea 'using' va apela streamReader.Close()
+            using (StreamReader streamReader = new StreamReader(numeFisier))
+            {
+                string linieFisier;
+
+                // citeste cate o linie si verifica daca numele cautat se potriveste
+                // cu cel al produsului din linia citita
+                while ((linieFisier = streamReader.ReadLine()) != null)
+                {
+                    Produs produs = new Produs(linieFisier);
+                    if (produs.Nume == nume)
+                    {
+                        return produs;
+                    }
+                }
+            }
+
+            return null; // daca nu a fost gasit produsul cu numele cautat
+        }
     }
 }

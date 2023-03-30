@@ -3,6 +3,8 @@ using System.Configuration;
 using System.Threading;
 
 using EvidentaProduse;
+using EvidentaComenzi;
+using InregistrareClienti;
 
 using NivelStocareDate;
 
@@ -28,6 +30,7 @@ namespace Cofetarie
                 Console.WriteLine("A. Afisare produse");
                 Console.WriteLine("F. Afisare produse din fisier");
                 Console.WriteLine("S. Salvare produs in fisier");
+                Console.WriteLine("C. Cautare produs in fisier");
                 Console.WriteLine("X. Inchidere program");
                 Console.WriteLine("Alegeti o optiune");
                 optiune = Console.ReadLine();
@@ -69,6 +72,19 @@ namespace Cofetarie
                         //adaugare student in fisier
                         adminProduse.AddProdus(produs);
 
+                        break;
+                    case "C":
+                        Console.WriteLine("Introduceti numele produsului:");
+                        string numeProdus = Console.ReadLine();
+                        Produs produsCautat = adminProduse.CautaProdus(numeProdus);
+                        if (produsCautat != null)
+                        {
+                            Console.WriteLine("Produsul cautat este: " + produsCautat.ConversieLaSir_PentruFisier());
+                        }
+                        else
+                        {
+                            Console.WriteLine("Produsul cu numele " + numeProdus + " nu a fost gasit.");
+                        }
                         break;
                     case "X":
 
