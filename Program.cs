@@ -41,17 +41,15 @@ namespace Cofetarie
 
                         Console.WriteLine("Introdu numele produsului {0} : ", idProdus);
                         string Nume = Console.ReadLine();
-                        Console.WriteLine("Introdu pretul produsului {0} : ", idProdus);
+                        Console.WriteLine("Introdu pretul produsului {0} in lei : ", idProdus);
                         float Pret = Convert.ToSingle(Console.ReadLine());
-                        Console.WriteLine("Introdu gramajul produsului {0} : ", idProdus);
+                        Console.WriteLine("Introdu gramajul produsului {0} in grame: ", idProdus);
                         int gramaj = Convert.ToInt16(Console.ReadLine());
-                        Console.WriteLine("Introdu codul produsului {0} : ", idProdus);
-                        int Cod = Convert.ToInt16(Console.ReadLine());
                         Console.WriteLine("Introdu descrierea produsului {0} : ", idProdus);
                         string Descriere = Console.ReadLine();
                         Console.WriteLine("Introdu nr de produse de acest fel preparate {0} : ", idProdus);
                         int NrProdusePreparate = Convert.ToInt16(Console.ReadLine());
-                        produs = new Produs(idProdus, Nume, Pret, gramaj, Cod, Descriere, NrProdusePreparate);
+                        produs = new Produs(idProdus, Nume, Pret, gramaj, Descriere, NrProdusePreparate);
                         nrProduse++;
 
                         break;
@@ -68,7 +66,7 @@ namespace Cofetarie
                     case "S":
                         idProdus = nrProduse + 1;
                         nrProduse++;
-                        produs = new Produs(idProdus, "Pavlova", 24, 200, 34233, "Gust bun", 25);
+                        produs = new Produs(idProdus, "Pavlova", 24, 200, "Gust bun", 25);
                         //adaugare student in fisier
                         adminProduse.AddProdus(produs);
 
@@ -98,14 +96,13 @@ namespace Cofetarie
         }
         public static void AfisareProdus(Produs produs)
         {
-                string infoProduse = string.Format("Produsul cu id-ul #{0} are numele: {1} , pretul: {2}, gramajul: {3}, codul: {4}, descrierea: {5}, numarul de produse preparate: {6}",
-                   produs.GetIdProdus(),
-                   produs.GetNume() ?? " NECUNOSCUT ",
-                   produs.GetPret(),
-                   produs.GetGramaj(),
-                   produs.GetCod(),
-                   produs.GetDescriere() ?? " NECUNOSCUT ",
-                   produs.GetPret());
+                string infoProduse = string.Format("Produsul cu id-ul #{0} are numele: {1} , pretul: {2}, gramajul: {3}, descrierea: {4}, numarul de produse preparate: {5}",
+                   produs.idProdus,
+                   produs.Nume ?? " NECUNOSCUT ",
+                   produs.Pret,
+                   produs.gramaj,
+                   produs.Descriere ?? " NECUNOSCUT ",
+                   produs.NrProdusePreparate);
                 Console.WriteLine(infoProduse);
         
         }
@@ -128,16 +125,13 @@ namespace Cofetarie
             Console.WriteLine("Introdu gramajul produsului {0} : ");
             int gramaj = Convert.ToInt16(Console.ReadLine());
 
-            Console.WriteLine("Introdu codul produsului {0} : ");
-            int Cod = Convert.ToInt16(Console.ReadLine());
-
             Console.WriteLine("Introdu descrierea produsului {0} : ");
             string Descriere = Console.ReadLine();
 
             Console.WriteLine("Introdu nr de produse de acest fel preparate {0} : ");
             int NrProdusePreparate = Convert.ToInt16(Console.ReadLine());
 
-            Produs produs= new Produs(0, Nume, Pret, gramaj, Cod, Descriere, NrProdusePreparate);
+            Produs produs= new Produs(0, Nume, Pret, gramaj, Descriere, NrProdusePreparate);
 
             return produs;
         }
