@@ -8,18 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
-
 namespace InterfataUtilizator_WindowsForms
 {
-    public partial class Produs : Form
+    public partial class AdaugaProdus : Form
     {
-        public Produs()
+        public AdaugaProdus()
         {
             InitializeComponent();
         }
 
-        private void Produs_Load(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
@@ -29,17 +27,7 @@ namespace InterfataUtilizator_WindowsForms
 
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }

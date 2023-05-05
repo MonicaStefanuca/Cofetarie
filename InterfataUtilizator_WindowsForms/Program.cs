@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using EvidentaProduse;
+
 namespace InterfataUtilizator_WindowsForms
 {
     internal static class Program
@@ -17,6 +19,7 @@ namespace InterfataUtilizator_WindowsForms
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Produs());
+            Application.Run(new AdaugaProdus());
         }
     }
 }
