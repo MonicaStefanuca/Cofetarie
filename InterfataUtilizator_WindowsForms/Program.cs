@@ -18,8 +18,8 @@ namespace InterfataUtilizator_WindowsForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Produs());
-            Application.Run(new AdaugaProdus());
+            Application.Run(new Produs(2));
+           
         }
     }
 }

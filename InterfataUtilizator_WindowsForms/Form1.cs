@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI;
 using System.Windows.Forms;
 
 
@@ -14,7 +15,7 @@ namespace InterfataUtilizator_WindowsForms
 {
     public partial class Produs : Form
     {
-        public Produs()
+        public Produs(int v)
         {
             InitializeComponent();
         }
@@ -41,7 +42,9 @@ namespace InterfataUtilizator_WindowsForms
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            AdaugaProdus f2 = new AdaugaProdus(); //this is the change, code for redirect  
+            f2.ShowDialog();
         }
     }
 }

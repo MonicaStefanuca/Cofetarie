@@ -67,7 +67,7 @@ namespace Cofetarie
                         idProdus = nrProduse + 1;
                         nrProduse++;
                         produs = new Produs(idProdus, "Pavlova", 24, 200, "Gust bun", 25);
-                        //adaugare student in fisier
+                        //adaugare in fisier
                         adminProduse.AddProdus(produs);
 
                         break;
